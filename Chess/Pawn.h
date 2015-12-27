@@ -1,8 +1,13 @@
 #ifndef pawn_h
 #define pawn_h
-class Pawn{
+#include <string>
+#include "Piece.h"
+using namespace std;
+
+class Pawn:public Piece{
 public:
     Pawn();
+    Pawn(string pos);
 private:
     
 };
