@@ -7,7 +7,7 @@ using namespace std;
 class Pawn:public Piece{
 public:
     Pawn();
-    Pawn(string pos);
+    Pawn(string pos, COLOR c);
 private:
     
 };
