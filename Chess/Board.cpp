@@ -26,7 +26,7 @@ void Board::draw(){
     }
 }
 void Board::update(Piece &p ){
-    sqToModify = p.posToSquare();
+    sqToModify = p.posToSquare();   // Call the piece's 
     squares[sqToModify] = 'P';
     /*
      Update board with piece information
