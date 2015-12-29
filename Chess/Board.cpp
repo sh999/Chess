@@ -4,7 +4,8 @@ using namespace std;
 Board::Board(){
     cout << "Base Board constructor\n";
     for(int i = 0; i < 64; i++){
-    	squares[i] = '.';
+        // Empty square represented as ' '
+    	squares[i] = ' ';
     }
 }
 
@@ -12,12 +13,17 @@ void Board::draw(){
     cout << "Drawing board\n";
     cout <<  " _ _ _ _ _ _ _ _\n";
     for(int i = 0; i < 64; i++){
-    	cout << "|" << squares[i];
+        // Draw board and create new line after 8 squares
+        // Display appropriate piece based on squares array
+        cout << "|";
+        if (squares[i] == ' '){
+            cout << "_";
+        }
+    	else cout << squares[i];
         if ((i + 1) % 8 == 0){
             cout << "|" << endl;
         }
     }
-    cout <<  " _ _ _ _ _ _ _ _\n";
 }
 void Board::update(Piece &p ){
     sqToModify = p.posToSquare();
@@ -28,7 +34,7 @@ void Board::update(Piece &p ){
     
 }
 /*
-
+Rough draft of what board should look like
  _ _ _ _ _ _ _ _
 |_|_|_|_|_|_|_|_|
 |_|_|_|_|_|_|_|_|
