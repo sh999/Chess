@@ -19,3 +19,7 @@ void Piece::disp(){
     cout << "Color = " << pieceColor;
 }
 
+int Piece::posToSquare(){
+    return 10;
+}
+

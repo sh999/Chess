@@ -19,7 +19,14 @@ void Board::draw(){
     }
     cout <<  " _ _ _ _ _ _ _ _\n";
 }
-
+void Board::update(Piece &p ){
+    sqToModify = p.posToSquare();
+    squares[sqToModify] = 'P';
+    /*
+     Update board with piece information
+     */
+    
+}
 /*
 
  _ _ _ _ _ _ _ _

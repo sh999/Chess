@@ -22,11 +22,14 @@ public:
                                   // Each piece has unique move function
     void captured();              // Called when piece is captured; same for all piece types
     void disp();                  // Print current position and color
-
+    int posToSquare(); // Converts position to integer representing square
+    // e.g. "a8" --> 1    "d2" --> 59    "h8 --> 63
+    
 private:
     string name;
     string currentPosition; // Standard file/rank. e.g.: c6
     COLOR pieceColor;       // 0 = White, 1 = Black
+    
     
 };
 

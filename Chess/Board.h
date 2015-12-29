@@ -1,6 +1,6 @@
 #ifndef board_h
 #define board_h
-
+#include "Piece.h"
 class Board{
 /*
  Data structure to store what piece is on each square
@@ -12,9 +12,10 @@ class Board{
 public:
     Board();         // Base constructor
     void draw();     // Draw ASCII chess board
-    void update();	 // Update board with new positions
+    void update(Piece&);	 // Update board with new positions
 private:
     char squares[64];
+    int sqToModify;
 };
 
 #endif
