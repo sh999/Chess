@@ -1,12 +1,15 @@
 #include <iostream>
 #include "Piece.h"
 #include "Pawn.h"
+#include "Board.h"
+
 using namespace std;
 
 int main()
 {
-//    Pawn p2;
-    Pawn p2("e2", BLACK);
-    p2.disp();
+    Board board;
+    Pawn p1("e2",BLACK);
+    p1.disp();
+    board.draw();
 }
 

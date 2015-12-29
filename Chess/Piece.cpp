@@ -2,9 +2,8 @@
 #include <iostream>
 #include <string>
 using namespace std;
-Piece::Piece():pieceColor(WHITE){
+Piece::Piece():pieceColor(WHITE){   // Base constructor sets color as white by default
     cout << "Default Piece constructor\n";
-//    currentPosition = "null";
 
 }
 

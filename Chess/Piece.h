@@ -11,8 +11,8 @@ using namespace std;
 
 
 enum COLOR{
-    WHITE, BLACK
-};
+    WHITE, BLACK    
+};  
 
 class Piece{
 public:
@@ -26,7 +26,7 @@ public:
 private:
     string name;
     string currentPosition; // Standard file/rank. e.g.: c6
-    COLOR pieceColor;
+    COLOR pieceColor;       // 0 = White, 1 = Black
     
 };
 
