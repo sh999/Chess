@@ -25,7 +25,7 @@ public:
     void disp();                  // Print current position and color
     int posToSquare(); // Converts position to integer representing square
     // e.g. "a8" --> 1    "d2" --> 59    "h8 --> 63
-    
+    string squareToPos(); // Converts square ID to position string
 private:
     string name;
     string currentPosition; // Standard file/rank. e.g.: c6

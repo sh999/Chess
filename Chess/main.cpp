@@ -12,7 +12,7 @@ using namespace std;
 int main()
 {
     Board board;
-    Pawn p1("h1",BLACK);
+    Pawn p1("c2",BLACK);
 //    p1.disp();
     p1.posToSquare();
     
