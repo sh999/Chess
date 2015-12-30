@@ -12,15 +12,15 @@ using namespace std;
 int main()
 {
     Board board;
-    Pawn p1("c2",BLACK);
+    PiecePositions startingPosition("ppp");
+//    Pawn p1("c2",BLACK);
 //    p1.disp();
-    p1.posToSquare();
-    
-//    board.draw();
+//    p1.posToSquare();
+    board.updateMultiple(startingPosition);
+    board.draw();
 //    board.update(p1);
 //    board.draw();
     
-//    PiecePositions startingPosition("ppp");
     
     
 }

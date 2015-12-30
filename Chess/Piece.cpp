@@ -52,38 +52,5 @@ int Piece::posToSquare(){
     
 }
 
-string squareToPos(int i){
-    int rank = 8 - int(i / 8);
-    int fileInt = i % 8;
-    string file;
-    if(fileInt == 0){
-        file = 'a';
-    }
-    else if(fileInt == 1){
-        file = 'b';
-    }
-    else if(fileInt == 2){
-        file = 'c';
-    }
-    else if(fileInt == 3){
-        file = 'd';
-    }
-    else if(fileInt == 4){
-        file = 'e';
-    }
-    else if(fileInt == 5){
-        file = 'f';
-    }
-    else if(fileInt == 6){
-        file = 'g';
-    }
-    else if(fileInt == 7){
-        file = 'h';
-    }
-//    cout << rank;
-//    cout << endl << file;
-    string pos = file + to_string(rank);
-//    cout << pos;
-    return pos;
-}
+
 

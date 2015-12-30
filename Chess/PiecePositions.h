@@ -24,11 +24,17 @@ class PiecePositions{
 
 public:
     PiecePositions();
-    PiecePositions(string positions);
+    PiecePositions(string positions);   // positions is a FEN-like string to
+                                        // describe piece position. Here, the constructor parses it and
+                                        // Creates Piece objects that are put in allPieces vector of pieces
     vector<Piece> getPieces();
+    void sendPiecesToBoard();           // After creating pieces, send information to board
+
     
 private:
     vector<Piece> allPieces;
+    string squareToPos(int i); // Converts square ID to position string
+
 };
 
 
