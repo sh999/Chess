@@ -12,13 +12,18 @@ PiecePositions::PiecePositions(string positions){
 
     for(int i = 1; i <= positions.length(); i++){
         squareCoord = i - 1;
-//        cout << positions[squareCoord];
         if(positions[squareCoord] == 'p'){
             cout << "yes";
-//            allPieces.push_back(Piece p(squareCoord, black));
+            allPieces.push_back(Piece("e2",BLACK,i));
         }
-        
     }
+    
+    for (int i = 0; i < positions.length(); i++) {
+        allPieces[i].disp();
+    }
+    /*
+     Converting position to square ID
+     */
 
 }
 

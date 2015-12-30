@@ -14,9 +14,16 @@ Piece::Piece(string pos, COLOR c){
     
 }
 
+Piece::Piece(string pos, COLOR c, int i):currentPosition(pos), pieceColor(c), pieceID(i) {
+    cout << "Piece constructor with position and id\n";
+    
+}
+
+
 void Piece::disp(){
     cout << "Current position = " << currentPosition << endl;
-    cout << "Color = " << pieceColor << endl;
+    cout << "Color = " << pieceColor << endl << "ID = " << pieceID;
+    
 }
 
 int Piece::posToSquare(){
@@ -37,34 +44,11 @@ int Piece::posToSquare(){
      */
     
     int rank = int(currentPosition[1])-48;
-    int square;
-    if (rank == 1){
-        square = 56;
-    }
-    else if(rank == 2){
-        square = 48;
-    }
-    else if(rank == 3){
-        square = 40;
-    }
-    else if(rank == 4){
-        square = 32;
-    }
-    else if(rank == 5){
-        square = 24;
-    }
-    else if(rank == 6){
-        square = 16;
-    }
-    else if(rank == 7){
-        square = 8;
-    }
-    else if(rank == 8){
-        square = 0;
-    }
-    square = square + (int(currentPosition[0]) - 97);
-    cout << "square = " << square << endl;
-
-    return square;
+    int file = int(currentPosition[0])-97;
+    int squareID;
+    squareID = (8-rank)*8+file;
+    cout << squareID;
+    return squareID;
+    
 }
 
