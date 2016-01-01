@@ -1,7 +1,9 @@
 #ifndef board_h
 #define board_h
 #include "Piece.h"
-#include "PiecePositions.h"
+//#include "PiecePositions.h"
+
+class PiecePositions;
 class Board{
 /*
  Data structure to store what piece is on each square
@@ -16,7 +18,7 @@ public:
     void update(Piece &p);	 // Update board with new position of a piece
     void updateMultiple(PiecePositions &pp);    // Update board with multiple pieces; used in start of game to set up initial positions
 private:
-    int squares[64];
+    char squares[64];
     int sqToModify;
 };
 

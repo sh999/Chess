@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include "Piece.h"
+#include "Board.h"
 using namespace std;
 class PiecePositions{
 /*
@@ -28,7 +29,7 @@ public:
                                         // describe piece position. Here, the constructor parses it and
                                         // Creates Piece objects that are put in allPieces vector of pieces
     vector<Piece> getPieces();
-    void sendPiecesToBoard();           // After creating pieces, send information to board
+    void sendPiecesToBoard(Board &b);           // After creating pieces, send information to board
 
     
 private:

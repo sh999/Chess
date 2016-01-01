@@ -1,3 +1,4 @@
+
 #include "PiecePositions.h"
 #include "Piece.h"
 #include <iostream>
@@ -11,6 +12,7 @@ PiecePositions::PiecePositions(){
 PiecePositions::PiecePositions(string positionsData){
     string tempPosition;
     for(int i = 0; i < positionsData.length(); i++){
+        // Creates piece objects depending on presence of character in input position
         if(positionsData[i] == 'p'){
             tempPosition = squareToPos(i);
             allPieces.push_back(Piece(tempPosition,BLACK,i));
@@ -20,10 +22,17 @@ PiecePositions::PiecePositions(string positionsData){
     for (int i = 0; i < positionsData.length(); i++) {
         allPieces[i].disp();
     }
-    /*
-     Converting position to square ID
-     */
 
+}
+
+void PiecePositions::sendPiecesToBoard(Board &b){
+    /*
+     Send whatever piece has been created to the board
+     */
+    for(int i = 0; i < allPieces.size(); i++){
+        b.update(allPieces[i]);
+    }
+    
 }
 
 vector<Piece> PiecePositions::getPieces(){

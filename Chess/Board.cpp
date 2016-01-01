@@ -49,6 +49,8 @@ void Board::updateMultiple(PiecePositions &pp){
      At the start of the game, a string is provided (FEN-like format)
      and is stored as a PiecePosition object, which parses the string
      and creates Piece objects stored in a vector within PiecePositions
+     
+     Do this in PiecePosition instead?
      */
 }
 /*
