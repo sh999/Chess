@@ -1,6 +1,6 @@
 /*
  Tasks:
-    Create vector of pieces in PiecePositions
+    
  */
 #include <iostream>
 #include "Piece.h"
@@ -12,8 +12,11 @@ using namespace std;
 int main()
 {
     Board board;
+    // Use FEN-like notation to set starting positions
+    // Below will create piece objects, but they won't be drawn on board yet
     PiecePositions startingPosition("/pppppppp////pppppppp/");
     board.draw();
+    // Puts created pieces on board
     startingPosition.sendPiecesToBoard(board);
     board.draw();
 }

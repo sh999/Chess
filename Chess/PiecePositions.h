@@ -20,21 +20,23 @@ class PiecePositions{
  rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR
     letters represent piece type (obvious). Numbers are # of empty squares
     '/' separates ranks. Start at 8th rank. Lowercase letters are black pieces
-
  */
 
 public:
     PiecePositions();
-    PiecePositions(string positions);   // positions is a FEN-like string to
-                                        // describe piece position. Here, the constructor parses it and
-                                        // Creates Piece objects that are put in allPieces vector of pieces
+    // Positions is a FEN-like string to
+    // describe piece position. Here, the constructor parses it and
+    // Creates Piece objects that are put in allPieces vector of pieces
+    PiecePositions(string positions);   
     vector<Piece> getPieces();
-    void sendPiecesToBoard(Board &b);           // After creating pieces, send information to board
+    // After creating pieces, send information to board
+    void sendPiecesToBoard(Board &b);
 
-    
 private:
+    // Holds all created pieces
     vector<Piece> allPieces;
-    string squareToPos(int i); // Converts square ID to position string
+    // Converts square ID (0-62) to position string (e.g. e2)
+    string squareToPos(int i);
 
 };
 

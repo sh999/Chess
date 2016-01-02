@@ -9,7 +9,6 @@ using namespace std;
  Base class for the 9 chess pieces
  */
 
-
 enum COLOR{
     WHITE, BLACK    
 };  
@@ -30,8 +29,5 @@ private:
     string currentPosition; // Standard file/rank. e.g.: c6
     COLOR pieceColor;       // 0 = White, 1 = Black
     int pieceID;             // For debugging purposes, simple integer id
-    
 };
-
-
 #endif

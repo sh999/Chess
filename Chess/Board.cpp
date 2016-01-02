@@ -39,23 +39,6 @@ void Board::update(Piece &p){
      */
     sqToModify = p.posToSquare();   // Call the piece's
     squares[sqToModify] = 'P';      // Currently can only draw Pawns
-
-    
 }
 
-void Board::updateMultiple(PiecePositions &pp){
-    /*
-     Updates board with multiple piece position info
-     At the start of the game, a string is provided (FEN-like format)
-     and is stored as a PiecePosition object, which parses the string
-     and creates Piece objects stored in a vector within PiecePositions
-     
-     Do this in PiecePosition instead?
-     */
-}
-/*
-Rough draft of what board should look like
- _ _ _ _ _ _ _ _
-|_|_|_|_|_|_|_|_|
-|_|_|_|_|_|_|_|_|
-*/
+
