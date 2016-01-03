@@ -28,13 +28,13 @@ public:
     // describe piece position. Here, the constructor parses it and
     // Creates Piece objects that are put in allPieces vector of pieces
     PiecePositions(string positions);   
-    vector<Piece> getPieces();
+    vector<Piece*> getPieces();
     // After creating pieces, send information to board
     void sendPiecesToBoard(Board &b);
 
 private:
     // Holds all created pieces
-    vector<Piece> allPieces;
+    vector<Piece *> allPieces;
     // Converts square ID (0-62) to position string (e.g. e2)
     string squareToPos(int i);
 

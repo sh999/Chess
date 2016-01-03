@@ -1,6 +1,7 @@
 
 #include "PiecePositions.h"
 #include "Piece.h"
+#include "Pawn.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -28,7 +29,9 @@ PiecePositions::PiecePositions(string positionsData){
             // Calculate chess position given by the square ID (necessary for Piece creation)
             tempPosition = squareToPos(squareNumber);
             // Store pieces in allPieces vector
-            allPieces.push_back(Piece(tempPosition,BLACK,i));
+            Piece *tempPiece = new Pawn(tempPosition, BLACK);
+//            allPieces.push_back(Pawn(tempPosition,BLACK));
+            allPieces.push_back(tempPiece);
             squareNumber = squareNumber + 1;
         }
         else if(positionsData[i] == '/'){
@@ -45,7 +48,7 @@ PiecePositions::PiecePositions(string positionsData){
     }
     
     for (int i = 0; i < positionsData.length(); i++) {
-        allPieces[i].disp();
+//        allPieces[i]->disp();
     }
 
 }
@@ -60,7 +63,7 @@ void PiecePositions::sendPiecesToBoard(Board &b){
     
 }
 
-vector<Piece> PiecePositions::getPieces(){
+vector<Piece*> PiecePositions::getPieces(){
     // Getter for allPieces
     return allPieces;
 }

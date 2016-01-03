@@ -7,18 +7,22 @@ Piece::Piece():pieceColor(WHITE){   // Base constructor sets color as white by d
 
 }
 
-Piece::Piece(string pos, COLOR c){
+Piece::Piece(string pos, COLOR c):currentPosition(pos), pieceColor(c){
     cout << "Piece constructor with position\n";
-    currentPosition = pos;
-    pieceColor = c;
-    
+    graphic = 'x';
 }
-
+/*
 Piece::Piece(string pos, COLOR c, int i):currentPosition(pos), pieceColor(c), pieceID(i) {
     cout << "Piece constructor with position and id\n";
-    
-}
+    graphic = 'x';
 
+    
+}*/
+
+char Piece::getGraphic(){
+    cout << "Piece's graphic = " << graphic << endl;
+    return graphic;
+}
 
 void Piece::disp(){
     cout << "Current position = " << currentPosition << endl;

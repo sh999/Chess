@@ -14,7 +14,7 @@ class Board{
 public:
     Board();         // Base constructor
     void draw();     // Draw ASCII chess board
-    void update(Piece &p);	 // Update board with new position of a piece
+    void update(Piece *p);	 // Update board with new position of a piece
 private:
     char squares[64];
     int sqToModify;

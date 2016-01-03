@@ -8,6 +8,7 @@ class Pawn:public Piece{
 public:
     Pawn();
     Pawn(string pos, COLOR c);
+    char getGraphic();
 private:
     
 };
