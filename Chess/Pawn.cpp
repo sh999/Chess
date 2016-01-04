@@ -10,8 +10,7 @@ Pawn::Pawn(string pos, COLOR c){
     cout << "Pawn (position, color) constructor \n";
     currentPosition = pos;
     pieceColor = c;
-    graphic = 'o';
-//    Piece::Piece(pos, c);
+    graphic = 'P';
 }
 
 char Pawn::getGraphic(){

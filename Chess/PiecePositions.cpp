@@ -2,6 +2,7 @@
 #include "PiecePositions.h"
 #include "Piece.h"
 #include "Pawn.h"
+#include "Rook.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -16,27 +17,28 @@ PiecePositions::PiecePositions(string positionsData){
      Piece objects with correct position
      */
     string tempPosition;
-    // Counter
-    int i = 0;
-    // Square coordinate (0-63) to place the piece in
-    int squareNumber = i;
+    int i = 0;     // Counter
+    int squareNumber = i; // Square coordinate (0-63) to place the piece in
     while (i < positionsData.length()){
         // Loop through entire string of FEN positions (thus .length())
         // Properly converts a char to int for numbers; e.g. '8'(char) -> 8 (int)
         int intValueFromString = positionsData[i] - 48;
-        // If 'p' is seen in input string, create pawn object
-        if(positionsData[i] == 'p'){ // Work with only pawns for now
-            // Calculate chess position given by the square ID (necessary for Piece creation)
+        if(positionsData[i] == 'p'){
+            /* 
+            Create pawn
+            Calculate chess position given by the square ID (necessary for Piece creation)
+            Store pieces in allPieces vector
+            */
             tempPosition = squareToPos(squareNumber);
-            // Store pieces in allPieces vector
             Piece *tempPiece = new Pawn(tempPosition, BLACK);
-//            allPieces.push_back(Pawn(tempPosition,BLACK));
             allPieces.push_back(tempPiece);
             squareNumber = squareNumber + 1;
         }
-        else if(positionsData[i] == '/'){
-            // New rank; must "jump" square number
-            squareNumber = (int(squareNumber / 8) + 1) * 8;
+        else if(positionsData[i] == 'r'){
+            tempPosition = squareToPos(squareNumber);
+            Piece *tempPiece = new Rook(tempPosition, BLACK);
+            allPieces.push_back(tempPiece);
+            squareNumber = squareNumber + 1;
         }
         else if(intValueFromString <= 8){ // Conditional simulates what if char = [0-8]
             // If a number 0-8 is found instead of a char

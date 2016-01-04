@@ -14,7 +14,7 @@ int main()
     Board board;
     // Use FEN-like notation to set starting positions
     // Below will create piece objects, but they won't be drawn on board yet
-    PiecePositions startingPosition("/pppppppp////pppppppp/");
+    PiecePositions startingPosition("rpppr");
     board.draw();
     // Puts created pieces on board
     startingPosition.sendPiecesToBoard(board);
