@@ -2,6 +2,7 @@
 Chess/Chess.1
 Chess.xcodeproj/*
 Chess/*.exe
+Chess/main
 #!Chess/*
 #!Chess
 #!*/*/
