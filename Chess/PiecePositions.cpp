@@ -1,4 +1,3 @@
-
 #include "PiecePositions.h"
 #include "Piece.h"
 #include "Pawn.h"
@@ -25,9 +24,9 @@ PiecePositions::PiecePositions(string positionsData){
         int intValueFromString = positionsData[i] - 48;
         if(positionsData[i] == 'p'){
             /* 
-            Create pawn
-            Calculate chess position given by the square ID (necessary for Piece creation)
-            Store pieces in allPieces vector
+            	Create pawn
+            	Calculate chess position given by the square ID (necessary for Piece creation)
+            	Store pieces in allPieces vector
             */
             tempPosition = squareToPos(squareNumber);
             Piece *tempPiece = new Pawn(tempPosition, BLACK);
@@ -41,9 +40,11 @@ PiecePositions::PiecePositions(string positionsData){
             squareNumber = squareNumber + 1;
         }
         else if(intValueFromString <= 8){ // Conditional simulates what if char = [0-8]
-            // If a number 0-8 is found instead of a char
-            // Don't create a piece, increment square number to
-            // simulate creating "blank" spaces
+            /* 
+	       If a number 0-8 is found instead of a char
+               Don't create a piece, increment square number to
+               simulate creating "blank" spaces 
+	    */
             squareNumber = squareNumber + (intValueFromString);
         }
         i++;

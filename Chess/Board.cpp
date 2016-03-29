@@ -14,13 +14,11 @@ Board::Board(){
 
 void Board::draw(){
     /*
-     Draws board
-     
-     Each square is filled with a character depending on piece identity
-     Each square's char data stored in squares[]
-     Values are modified by Board::update()
-     */
-
+    	Draws board
+     	Each square is filled with a character depending on piece identity
+     	Each square's char data stored in squares[]
+     	Values are modified by Board::update()
+    */
     cout << "Drawing board\n";
     cout <<  " _ _ _ _ _ _ _ _\n";
     for(int i = 0; i < 64; i++){
@@ -39,8 +37,8 @@ void Board::draw(){
 
 void Board::update(Piece *p){
     /*
-     Modifies squares[], which holds identity of what piece is on each square 
-     */
+    	Modifies squares[], which holds identity of what piece is on each square 
+    */
 
     cout << "Calling board update\n";
     sqToModify = p->posToSquare();   // Call the piece's
