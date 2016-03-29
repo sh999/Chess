@@ -6,7 +6,9 @@
 class PiecePositions;
 class Board{
 /*
- Data structure to store what piece is on each square
+ Board is a data structure to store what piece is on each square
+ Currently it is a very simple implementation, with the identity
+  of each square stored in a char[].
  More complex data structure can be used to more easily
     accomodate piece movement algorithms
  */
@@ -16,7 +18,7 @@ public:
     void draw();     // Draw ASCII chess board
     void update(Piece *p);	 // Update board with new position of a piece
 private:
-    char squares[64];
+    char squares[64]; // Holds piece identity for all squares
     int sqToModify;
 };
 
