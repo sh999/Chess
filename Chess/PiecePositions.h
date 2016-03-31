@@ -32,7 +32,7 @@ public:
     				      // creates Piece objects that are put in allPieces vector of pieces */
     vector<Piece*> getPieces();
     void sendPiecesToBoard(Board &b); // After creating pieces, send information to board
-
+    Piece* getOnePiece();
 private:
     vector<Piece *> allPieces;	      // Holds all created pieces
     string squareToPos(int i);	      // Converts square ID (0-62) to position string (e.g. e2)

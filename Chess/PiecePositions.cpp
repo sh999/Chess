@@ -63,10 +63,9 @@ void PiecePositions::sendPiecesToBoard(Board &b){
     for(int i = 0; i < allPieces.size(); i++){
         b.update(allPieces[i]);
     }
-    
 }
 
-vector<Piece*> PiecePositions::getPieces(){
+vector<Piece *> PiecePositions::getPieces(){
     // Getter for allPieces
     return allPieces;
 }
