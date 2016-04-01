@@ -30,6 +30,7 @@ private:
     string name;
     
     int pieceID;             // For debugging purposes, simple integer id
+
 protected:
     char graphic;
     string currentPosition; // Standard file/rank. e.g.: c6
