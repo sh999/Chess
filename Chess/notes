@@ -43,3 +43,5 @@ Example scenario:
 	Test: test_findPiece() : Success
 
 	1/1 tests passed
+
+- Edit makefile to compile only modified files
