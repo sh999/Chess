@@ -2,15 +2,15 @@
 #define piecesetter_h
 #include "Piece.h"
 #include "Board.h"
-#include "PiecePositions.h"
+#include "Positions.h"
 
 class PieceSetter{
 	/* 
-		Facilitates communication between PiecePositions and Board
+		Facilitates communication between Positions and Board
 	*/
 	public:
 		PieceSetter();
-		void sendPiecesToBoard(PiecePositions p, Board &b);
+		void sendPiecesToBoard(Positions p, Board &b);
 	private:
 };
 
