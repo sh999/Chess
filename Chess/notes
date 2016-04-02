@@ -1,3 +1,45 @@
 4/2/16
-Working on ppctor branch: taking parsing out of constructor
-Think about doing unit tests after merging with master branch
+-Working on ppctor branch: taking parsing out of constructor
+	Success in taking parsing out into parsePositions()
+
+-Think about doing unit tests after merging with master branch
+
+-Now let's work on basic unit tests
+Strategy: in main(), call either test() or game(). Create a test.cpp that has all unit tests.
+
+Example scenario:
+	Test name: test_findPiece()
+	Goal: Find piece on a square
+	Sample run:
+
+	$ ./main test
+	Available unit tests:
+	1) findPiece()
+	Enter a test's number to run it or enter 'all' to run all tests.
+	$ 1	
+	Running findPiece() test...
+	Enter the file that has starting positions:
+	$ ./test/startingpos.txt
+	Input:
+	a2: white pawn
+	a2: white pawn
+	b8: black knight
+	Enter the square you would like to find a piece. 'q' to quit:
+	$ a3
+	No piece found
+	$ a2
+	White pawn
+	$ a3
+	White pawn
+	$ b8
+	Black knight
+	$sdlkf
+	Invalid position
+	$ q
+	Quitting...
+	=================
+	Unit test summary
+	=================
+	Test: test_findPiece() : Success
+
+	1/1 tests passed
