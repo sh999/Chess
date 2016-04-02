@@ -36,7 +36,7 @@ public:
 private:
     vector<Piece *> allPieces;	      // Holds all created pieces
     string squareToPos(int i);	      // Converts square ID (0-62) to position string (e.g. e2)
-    void PiecePositions::parsePositions(string fenInput);
+    vector<Piece *> parsePositions(string fenInput);    // Called by constructor to parse input string positions
 };
 
 

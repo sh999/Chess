@@ -15,47 +15,10 @@ PiecePositions::PiecePositions(string positionsData){
      Based on string that describes pieces with Fen-like notation, will create
      Piece objects with correct position
      */
-     allPositions = parsePositions(positionsData);
-     /*
-    string tempPosition;
-    int i = 0;     // Counter
-    int squareNumber = i; // Square coordinate (0-63) to place the piece in
-    while (i < positionsData.length()){
-        // Loop through entire string of FEN positions (thus .length())
-        // Properly converts a char to int for numbers; e.g. '8'(char) -> 8 (int)
-        int intValueFromString = positionsData[i] - 48;
-        if(positionsData[i] == 'p'){
-            // 
-            //	Create pawn
-            //	Calculate chess position given by the square ID (necessary for Piece creation)
-            //	Store pieces in allPieces vector
-            
-            tempPosition = squareToPos(squareNumber);
-            Piece *tempPiece = new Pawn(tempPosition, BLACK);
-            allPieces.push_back(tempPiece);
-            squareNumber = squareNumber + 1;
-        }
-        else if(positionsData[i] == 'r'){
-            tempPosition = squareToPos(squareNumber);
-            Piece *tempPiece = new Rook(tempPosition, BLACK);
-            allPieces.push_back(tempPiece);
-            squareNumber = squareNumber + 1;
-        }
-        else if(intValueFromString <= 8){ // Conditional simulates what if char = [0-8]
-            // 
-	        //   If a number 0-8 is found instead of a char
-            //   Don't create a piece, increment square number to
-            //   simulate creating "blank" spaces 
-	    
-            squareNumber = squareNumber + (intValueFromString);
-        }
-        i++;
-    }*/
-    
+     allPieces = parsePositions(positionsData);
     for (int i = 0; i < positionsData.length(); i++) {
 //        allPieces[i]->disp();
     }
-
 }
 
 void PiecePositions::sendPiecesToBoard(Board &b){
@@ -68,7 +31,6 @@ void PiecePositions::sendPiecesToBoard(Board &b){
 }
 
 vector<Piece *> PiecePositions::getPieces(){
-    // Getter for allPieces
     return allPieces;
 }
 
@@ -109,7 +71,7 @@ string PiecePositions::squareToPos(int i){
     return pos;
 }
 
-void PiecePositions::parsePositions(string fenInput){
+vector<Piece*> PiecePositions::parsePositions(string fenInput){
     string tempPosition;
     int i = 0;     // Counter
     int squareNumber = i; // Square coordinate (0-63) to place the piece in
