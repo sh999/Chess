@@ -1,4 +1,4 @@
-#include "PiecePositions.h"
+#include "Positions.h"
 #include "Piece.h"
 #include "Pawn.h"
 #include "Rook.h"
@@ -6,22 +6,22 @@
 #include <vector>
 #include <string>
 using namespace std;
-PiecePositions::PiecePositions(){
+Positions::Positions(){
     // Undefined for now; is it necessary to define?
 }
 
-PiecePositions::PiecePositions(string positionsData){
+Positions::Positions(string inputPositions){
     /*
      Based on string that describes pieces with Fen-like notation, will create
      Piece objects with correct position
      */
-     allPieces = parsePositions(positionsData);
-    for (int i = 0; i < positionsData.length(); i++) {
+     allPieces = parsePositions(inputPositions);
+    for (int i = 0; i < inputPositions.length(); i++) {
 //        allPieces[i]->disp();
     }
 }
 
-void PiecePositions::sendPiecesToBoard(Board &b){
+void Positions::sendPiecesToBoard(Board &b){
     /*
      Send whatever piece has been created to the board
      */
@@ -30,11 +30,11 @@ void PiecePositions::sendPiecesToBoard(Board &b){
     }
 }
 
-vector<Piece *> PiecePositions::getPieces(){
+vector<Piece *> Positions::getPieces(){
     return allPieces;
 }
 
-string PiecePositions::squareToPos(int i){
+string Positions::squareToPos(int i){
     /*
      Convert square ID (0-63) to chess position (e.g. e2)
      */
@@ -71,7 +71,7 @@ string PiecePositions::squareToPos(int i){
     return pos;
 }
 
-vector<Piece*> PiecePositions::parsePositions(string fenInput){
+vector<Piece*> Positions::parsePositions(string fenInput){
     string tempPosition;
     int i = 0;     // Counter
     int squareNumber = i; // Square coordinate (0-63) to place the piece in

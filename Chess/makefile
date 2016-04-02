@@ -1,17 +1,17 @@
 CC = g++
 LD = g++
-PROG = main
+MAIN = main
 CFLAGS = -std=c++11 -Wall
 OBJS = main.o PieceSetter.o Board.o Pawn.o Piece.o PiecePositions.o Rook.o 
 
 # invoke rule all when make is run
-# ensure $(PROG) exisst (create main file because PROG = main)
-all: $(PROG)
+# ensure $(MAIN) exisst (create main file because MAIN = main)
+all: $(MAIN)
 
-# create PROG, or main executable, from OBJS (object files) 
+# create MAIN, or main executable, from OBJS (object files) 
 #  using the linker, which takes the .o files and link to make executable
-$(PROG): $(OBJS)
-	$(LD) $(OBJS) -o $(PROG)
+$(MAIN): $(OBJS)
+	$(LD) $(OBJS) -o $(MAIN)
 
 # how to make each object file
 # make each object file by invoking compiler, which takes .cpp source files

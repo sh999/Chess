@@ -1,12 +1,12 @@
-#ifndef piecepositions_h
-#define piecepositions_h
+#ifndef positions_h
+#define positions_h
 #include <string>
 #include <iostream>
 #include <vector>
 #include "Piece.h"
 #include "Board.h"
 using namespace std;
-class PiecePositions{
+class Positions{
 /*
  Summary:
  =======
@@ -26,8 +26,8 @@ class PiecePositions{
  */
 
 public:
-    PiecePositions();
-    PiecePositions(string positions); // Positions is a FEN-like string to   
+    Positions();
+    Positions(string inputPositions); // Positions is a FEN-like string to   
     				      // describe piece position. Here, the constructor parses it and
     				      // creates Piece objects that are put in allPieces vector of pieces */
     vector<Piece*> getPieces();
