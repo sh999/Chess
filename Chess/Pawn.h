@@ -3,7 +3,6 @@
 #include <string>
 #include "Piece.h"
 #include <iostream>
-
 using namespace std;
 
 class Pawn:public Piece{
@@ -12,7 +11,6 @@ public:
     Pawn(string pos, COLOR c);
     char getGraphic();
 private:
-    
 };
 
 #endif

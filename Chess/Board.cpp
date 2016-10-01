@@ -37,13 +37,8 @@ void Board::update(Piece *p){
     /*
     	Modifies squares[], which holds identity of what piece is on each square 
     */
-
     cout << "Calling board update\n";
     sqToModify = p->posToSquare();   // Call the piece's
-    
     squares[sqToModify] = p->getGraphic();      // Currently can only draw Pawns
-
     //        squares[sqToModify] = 'o';      // Currently can only draw Pawns
 }
-
-

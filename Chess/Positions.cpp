@@ -67,6 +67,10 @@ string Positions::squareToPos(int i){
 }
 
 vector<Piece*> Positions::parsePositions(string fenInput){
+    /*
+        Given a plain string (e.g. "PRRP" for pawn, 2 rooks, pawn),
+
+    */
     string tempPosition;
     int i = 0;     // Counter
     int squareNumber = i; // Square coordinate (0-63) to place the piece in
@@ -76,11 +80,9 @@ vector<Piece*> Positions::parsePositions(string fenInput){
         // Properly converts a char to int for numbers; e.g. '8'(char) -> 8 (int)
         int intValueFromString = fenInput[i] - 48;
         if(fenInput[i] == 'p'){
-            // 
             //  Create pawn
             //  Calculate chess position given by the square ID (necessary for Piece creation)
             //  Store pieces in allPieces vector
-            
             tempPosition = squareToPos(squareNumber);
             Piece *tempPiece = new Pawn(tempPosition, BLACK);
             _allPieces.push_back(tempPiece);
@@ -93,11 +95,9 @@ vector<Piece*> Positions::parsePositions(string fenInput){
             squareNumber = squareNumber + 1;
         }
         else if(intValueFromString <= 8){ // Conditional simulates what if char = [0-8]
-            // 
             //   If a number 0-8 is found instead of a char
-            //   Don't create a piece, increment square number to
-            //   simulate creating "blank" spaces 
-        
+            //    Don't create a piece, increment square number to
+            //     simulate creating "blank" spaces 
             squareNumber = squareNumber + (intValueFromString);
         }
         i++;

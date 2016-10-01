@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
+
 Piece::Piece():pieceColor(WHITE){   // Base constructor sets color as white by default
     cout << "Default Piece constructor\n";
 
@@ -15,8 +16,6 @@ Piece::Piece(string pos, COLOR c):currentPosition(pos), pieceColor(c){
 Piece::Piece(string pos, COLOR c, int i):currentPosition(pos), pieceColor(c), pieceID(i) {
     cout << "Piece constructor with position and id\n";
     graphic = 'x';
-
-    
 }*/
 
 char Piece::getGraphic(){
@@ -27,7 +26,6 @@ char Piece::getGraphic(){
 void Piece::disp(){
     cout << "Current position = " << currentPosition << endl;
     cout << "Color = " << pieceColor << endl << "ID = " << pieceID;
-    
 }
 
 int Piece::posToSquare(){
@@ -46,14 +44,12 @@ int Piece::posToSquare(){
         because it's 7, take number 48
         because it's b, square = 48 + 2 - 1 = 49
      */
-    
     int rank = int(currentPosition[1])-48;
     int file = int(currentPosition[0])-97;
     int squareID;
     squareID = (8-rank)*8+file;
     cout << squareID;
     return squareID;
-    
 }
 
 

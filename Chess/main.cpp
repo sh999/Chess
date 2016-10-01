@@ -33,10 +33,10 @@ void game(){
 		Normal game with conventional positions
 	*/
     Board board;
-    Positions startingPosition("rppprrr");		// Use FEN-like notation to set starting positions
-    board.draw();								// Draw empty board
+    Positions startingPosition("rrrrrrrrpppppppp");		// Use FEN-like notation to set starting positions
+    // board.draw();								// Draw empty board
 //    startingPosition.sendPiecesToBoard(board);		// Puts created pieces on board
-    PieceSetter pieceSetter;					// Works in between position and board
-    pieceSetter.sendPiecesToBoard(startingPosition, board);
-    board.draw();
+    PieceSetter pieceSetter;					
+    pieceSetter.sendPiecesToBoard(startingPosition, board); // Given a starting position, sets the pieces to the board
+    board.draw();								// Draw board with updated pieces
 }

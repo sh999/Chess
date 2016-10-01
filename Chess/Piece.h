@@ -25,12 +25,9 @@ public:
     int posToSquare(); // Converts position to integer representing square
     // e.g. "a8" --> 1    "d2" --> 59    "h8 --> 63
     virtual char getGraphic();      // Graphic representation of piece
-    
 private:
     string name;
-    
     int pieceID;             // For debugging purposes, simple integer id
-
 protected:
     char graphic;
     string currentPosition; // Standard file/rank. e.g.: c6

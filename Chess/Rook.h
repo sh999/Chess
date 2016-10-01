@@ -10,7 +10,5 @@ public:
     Rook(string pos, COLOR c);
     char getGraphic();
 private:
-    
 };
-
 #endif

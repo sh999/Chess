@@ -13,13 +13,12 @@ class Board{
  More complex data structure can be used to more easily
     accomodate piece movement algorithms
  */
-
 public:
-    Board();         // Base constructor
-    void draw();     // Draw ASCII chess board
+    Board();         		 // Base constructor
+    void draw();     		 // Draw ASCII chess board
     void update(Piece *p);	 // Update board with new position of a piece
 private:
-    char squares[64]; // Holds piece identity for all squares
+    char squares[64]; 		 // Holds piece identity for all squares
     int sqToModify;
 };
 
