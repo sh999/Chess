@@ -5,6 +5,8 @@
 #include <vector>
 #include "Piece.h"
 #include "Board.h"
+#include "Pawn.h"
+#include "Rook.h"
 using namespace std;
 class Positions{
 /*
@@ -38,6 +40,5 @@ private:
     string squareToPos(int i);	      // Converts square ID (0-62) to position string (e.g. e2)
     vector<Piece *> parsePositions(string fenInput);    // Called by constructor to parse input string positions
 };
-
 
 #endif

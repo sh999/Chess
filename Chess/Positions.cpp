@@ -1,10 +1,5 @@
 #include "Positions.h"
-#include "Piece.h"
-#include "Pawn.h"
-#include "Rook.h"
-#include <iostream>
-#include <vector>
-#include <string>
+
 using namespace std;
 Positions::Positions(){
     // Undefined for now; is it necessary to define?

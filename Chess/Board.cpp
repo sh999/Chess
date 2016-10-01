@@ -1,7 +1,5 @@
 #include "Board.h"
-#include "Piece.h"
-#include "PiecePositions.h"
-#include <iostream>
+
 using namespace std;
 
 Board::Board(){

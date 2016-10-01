@@ -1,6 +1,7 @@
 #ifndef board_h
 #define board_h
 #include "Piece.h"
+#include <iostream>
 
 // Forward declaration to prevent circular includes
 class PiecePositions;
