@@ -35,7 +35,9 @@ void Board::draw(){
 
 void Board::update(Piece *p){
     /*
-    	Modifies squares[], which holds identity of what piece is on each square 
+    	Update doesn't draw, but changes the underlying storage of what piece
+         is held by what square
+        Modifies squares[], which holds identity of what piece is on each square 
     */
     cout << "Calling board update\n";
     sqToModify = p->posToSquare();   // Call the piece's

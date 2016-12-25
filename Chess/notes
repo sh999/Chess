@@ -45,3 +45,8 @@ Example scenario:
 	1/1 tests passed
 
 - Edit makefile to compile only modified files
+
+12/25/16
+
+Maybe better to put piecessetter function in either positions class or board class to 
+ simplify

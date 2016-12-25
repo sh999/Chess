@@ -12,7 +12,7 @@ void game();
 int main(int argc, char* argv[])
 {
 	string test_or_game;	// user cmd line argument for test or game
-	if(argc == 1){ 		// if just running ./main, run game and not testing by default
+	if(argc == 1){ 			// if run without args, run game and not testing by default
 		game();
 	}
 	else{
@@ -28,15 +28,29 @@ int main(int argc, char* argv[])
 	}
 }
 
+void set_simple_pieces(){
+	/*
+		Set board with rooks and pawns in rank 8
+		Will modify this function to be a unit test
+	*/
+	Board board;
+    Positions startingPosition("rrrrrrrrpppppppp");		// Use FEN-like notation to set starting positions
+    // board.draw();									// Draw empty board
+//    startingPosition.sendPiecesToBoard(board);		// Puts created pieces on board
+    PieceSetter pieceSetter;					
+    pieceSetter.sendPiecesToBoard(startingPosition, board); // Given a starting position, sets the pieces to the board
+    board.draw();	
+}
+
 void game(){
 	/*
 		Normal game with conventional positions
 	*/
     Board board;
     Positions startingPosition("rrrrrrrrpppppppp");		// Use FEN-like notation to set starting positions
-    // board.draw();								// Draw empty board
+    // board.draw();									// Draw empty board
 //    startingPosition.sendPiecesToBoard(board);		// Puts created pieces on board
     PieceSetter pieceSetter;					
     pieceSetter.sendPiecesToBoard(startingPosition, board); // Given a starting position, sets the pieces to the board
-    board.draw();								// Draw board with updated pieces
+    board.draw();										// Draw board with updated pieces
 }
