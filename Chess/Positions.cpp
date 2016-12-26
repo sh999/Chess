@@ -14,16 +14,17 @@ Positions::Positions(string inputPositions){
     for (int i = 0; i < inputPositions.length(); i++) {
 //        allPieces[i]->disp();
     }
+    cout << "POSITIONS SIZE = " << allPieces.size() << endl;
 }
 
-void Positions::sendPiecesToBoard(Board &b){
-    /*
-     Send whatever piece has been created to the board
-     */
-    for(int i = 0; i < allPieces.size(); i++){
-        b.update(allPieces[i]);
-    }
-}
+// void Positions::sendPiecesToBoard(Board &b){
+    
+//      Send whatever piece has been created to the board
+     
+//     for(int i = 0; i < allPieces.size(); i++){
+//         b.update(allPieces[i]);
+//     }
+// }
 
 vector<Piece *> Positions::getPieces(){
     return allPieces;

@@ -50,3 +50,5 @@ Example scenario:
 
 Maybe better to put piecessetter function in either positions class or board class to 
  simplify
+
+Should have a Board constructor to take in Positions obj. to do the above

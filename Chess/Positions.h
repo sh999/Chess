@@ -4,7 +4,7 @@
 #include <iostream>
 #include <vector>
 #include "Piece.h"
-#include "Board.h"
+// #include "Board.h"
 #include "Pawn.h"
 #include "Rook.h"
 using namespace std;
@@ -38,7 +38,7 @@ public:
     				                    // describe piece position. Here, the constructor parses it and
     				                    // creates Piece objects that are put in allPieces vector of pieces */
     vector<Piece*> getPieces();
-    void sendPiecesToBoard(Board &b);   // After creating pieces, send information to board
+    // void sendPiecesToBoard(Board &b);   // After creating pieces, send information to board
     Piece* getOnePiece();
 private:
     vector<Piece *> allPieces;	         // Holds all created pieces

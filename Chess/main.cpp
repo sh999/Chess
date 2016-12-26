@@ -32,6 +32,7 @@ void set_simple_pieces(){
 	/*
 		Set board with rooks and pawns in rank 8
 		Will modify this function to be a unit test
+		Currently not called by anything; copied from game()
 	*/
 	Board board;
     Positions startingPosition("rrrrrrrrpppppppp");		// Use FEN-like notation to set starting positions
@@ -46,11 +47,7 @@ void game(){
 	/*
 		Normal game with conventional positions
 	*/
-    Board board;
     Positions startingPosition("rrrrrrrrpppppppp");		// Use FEN-like notation to set starting positions
-    // board.draw();									// Draw empty board
-//    startingPosition.sendPiecesToBoard(board);		// Puts created pieces on board
-    PieceSetter pieceSetter;					
-    pieceSetter.sendPiecesToBoard(startingPosition, board); // Given a starting position, sets the pieces to the board
+    Board board(startingPosition);  					// Pass the position obj to Board constructor to create Board with the given positions
     board.draw();										// Draw board with updated pieces
 }

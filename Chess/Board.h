@@ -1,6 +1,7 @@
 #ifndef board_h
 #define board_h
 #include "Piece.h"
+#include "Positions.h"
 #include <iostream>
 
 // Forward declaration to prevent circular includes
@@ -15,6 +16,7 @@ class Board{
  */
 public:
     Board();         		 // Base constructor
+    Board(Positions p);		 // Alternate constructor that takes in positions
     void draw();     		 // Draw ASCII chess board
     void update(Piece *p);	 // Update board with new position of a piece
 private:

@@ -6,8 +6,27 @@ Board::Board(){
     cout << "Base Board constructor\n";
     for(int i = 0; i < 64; i++){
         // Empty square represented as ' '
+        cout << "Drawing empty space..\n";
     	squares[i] = ' ';
     }
+}
+
+Board::Board(Positions pos){
+    /*
+        Board constructor with positions
+    */
+    cout << "Alternate Board constructor\n";
+    for(int i = 0; i < 64; i++){
+        // Empty square represented as ' '
+        cout << "Drawing empty space..\n";
+        squares[i] = ' ';
+    }
+    vector <Piece *> allPieces = pos.getPieces();
+    for(int i = 0; i < allPieces.size(); i++){
+        update(allPieces[i]);
+    }
+    cout << "POSITIONS SIZE = " << allPieces.size() << endl;
+
 }
 
 void Board::draw(){
