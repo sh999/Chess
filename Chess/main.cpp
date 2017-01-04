@@ -47,7 +47,7 @@ void game(){
 	/*
 		Normal game with conventional positions
 	*/
-    Positions startingPosition("rrrrrrrrpppppppp");		// Use FEN-like notation to set starting positions
+    Positions startingPosition("rrrRRRrrPpPpppppppp");		// Use FEN-like notation to set starting positions
     Board board(startingPosition);  					// Pass the position obj to Board constructor to create Board with the given positions
     board.draw();										// Draw board with updated pieces
 }

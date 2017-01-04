@@ -15,6 +15,12 @@ Pawn::Pawn(string pos, COLOR c){
     currentPosition = pos;
     pieceColor = c;
     graphic = 'P';
+    if(pieceColor == WHITE){
+    	graphic = 'P';
+    }
+    else if(pieceColor == BLACK){
+    	graphic = 'p';
+    }
 }
 
 char Pawn::getGraphic(){

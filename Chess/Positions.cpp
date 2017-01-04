@@ -10,8 +10,8 @@ Positions::Positions(string inputPositions){
      Based on string that describes pieces with Fen-like notation, will create
      Piece objects with correct position
      */
-     allPieces = parsePositions(inputPositions);
-    for (int i = 0; i < inputPositions.length(); i++) {
+    allPieces = parsePositions(inputPositions);
+    for (size_t i = 0; i < inputPositions.length(); i++) {
 //        allPieces[i]->disp();
     }
     cout << "POSITIONS SIZE = " << allPieces.size() << endl;
@@ -73,7 +73,7 @@ vector<Piece*> Positions::parsePositions(string fenInput){
 
     */
     string tempPosition;
-    int i = 0;     // Counter
+    size_t i = 0;     // Counter
     int squareNumber = i; // Square coordinate (0-63) to place the piece in
     vector <Piece *> _allPieces;
     while (i < fenInput.length()){
@@ -89,9 +89,21 @@ vector<Piece*> Positions::parsePositions(string fenInput){
             _allPieces.push_back(tempPiece);
             squareNumber = squareNumber + 1;
         }
+        else if(fenInput[i] == 'P'){
+            tempPosition = squareToPos(squareNumber);
+            Piece *tempPiece = new Pawn(tempPosition, WHITE);
+            _allPieces.push_back(tempPiece);
+            squareNumber = squareNumber + 1;
+        }
         else if(fenInput[i] == 'r'){
             tempPosition = squareToPos(squareNumber);
             Piece *tempPiece = new Rook(tempPosition, BLACK);
+            _allPieces.push_back(tempPiece);
+            squareNumber = squareNumber + 1;
+        }
+        else if(fenInput[i] == 'R'){
+            tempPosition = squareToPos(squareNumber);
+            Piece *tempPiece = new Rook(tempPosition, WHITE);
             _allPieces.push_back(tempPiece);
             squareNumber = squareNumber + 1;
         }

@@ -11,7 +11,12 @@ Rook::Rook(string pos, COLOR c){
     cout << "Rook (position, color) constructor \n";
     currentPosition = pos;
     pieceColor = c;
-    graphic = 'R';
+    if(pieceColor == WHITE){
+    	graphic = 'R';
+    }
+    else if(pieceColor == BLACK){
+    	graphic = 'r';
+    }
 }
 
 char Rook::getGraphic(){
