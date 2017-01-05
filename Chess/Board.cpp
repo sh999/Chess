@@ -99,5 +99,51 @@ int Board::movestringToNum(string pos_string){
         Task: Convert to numerical board position;
             opposite of squareToPos()
     */
-    return 99;
+    cout << "Doing move " << pos_string << endl;
+    char file = pos_string[0];
+    int rank = int(pos_string[1])-48;
+    cout << "file = " << file << endl;
+    cout << "rank = " << rank << endl;
+    int file2 = int(file)-97;
+    int rank2 = 8-rank;
+    int numpos = rank2*8+file2;
+    cout << "file2 = " << file2 << endl;
+    cout << "rank2 = " << rank2 << endl;
+    cout << "numpos = " << numpos << endl;
+    
+    // int pos = file2
+
+    return 1;
+
+/*
+    int rank = 8 - int(i / 8);
+    // Conversion to letter file requires more steps
+    int fileInt = i % 8;
+    string file;
+    if(fileInt == 0){
+        file = 'a';
+    }
+    else if(fileInt == 1){
+        file = 'b';
+    }
+    else if(fileInt == 2){
+        file = 'c';
+    }
+    else if(fileInt == 3){
+        file = 'd';
+    }
+    else if(fileInt == 4){
+        file = 'e';
+    }
+    else if(fileInt == 5){
+        file = 'f';
+    }
+    else if(fileInt == 6){
+        file = 'g';
+    }
+    else if(fileInt == 7){
+        file = 'h';
+    }
+    string pos = file + to_string(rank);
+    return pos;*/
 }

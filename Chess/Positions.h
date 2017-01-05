@@ -37,13 +37,13 @@ public:
     Positions(string inputPositions);   // Positions is a FEN-like string to   
     				                    // describe piece position. Here, the constructor parses it and
     				                    // creates Piece objects that are put in allPieces vector of pieces */
-    vector<Piece*> getPieces();
+    vector<Piece*> getPieces(); // return vector of pieces
     // void sendPiecesToBoard(Board &b);   // After creating pieces, send information to board
     Piece* getOnePiece();
 private:
     vector<Piece *> allPieces;	         // Holds all created pieces
     string squareToPos(int i);	         // Converts square ID (0-62) to position string (e.g. e2)
-    vector<Piece *> parsePositions(string fenInput);    // Called by constructor to parse input string positions
+    vector<Piece *> parsePositions(string fenInput);    // Called by constructor to parse input string positions; turns fen input string to collection of piece objects
 };
 
 #endif
