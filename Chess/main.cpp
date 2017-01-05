@@ -40,7 +40,7 @@ void test_parse_move(){
     board.draw();
     board.move_by_ints(3,11);
     board.draw();
-
+    cout << board.movestringToNum("a4");
 
 }
 

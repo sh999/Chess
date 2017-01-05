@@ -67,6 +67,9 @@ string Positions::squareToPos(int i){
     return pos;
 }
 
+
+
+
 vector<Piece*> Positions::parsePositions(string fenInput){
     /*
         Given a plain string (e.g. "PRRP" for pawn, 2 rooks, pawn),

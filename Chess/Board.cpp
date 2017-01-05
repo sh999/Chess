@@ -93,3 +93,11 @@ void Board::move_by_ints(int from, int to){
     }
 
 }
+int Board::movestringToNum(string pos_string){
+    /*
+        Input: move_string (e.g. 'd2')
+        Task: Convert to numerical board position;
+            opposite of squareToPos()
+    */
+    return 99;
+}
