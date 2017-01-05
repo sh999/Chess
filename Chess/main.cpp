@@ -8,7 +8,7 @@
 #include <string>
 using namespace std;
 void game();
-
+void test_parse_move();
 int main(int argc, char* argv[])
 {
 	string test_or_game;	// user cmd line argument for test or game
@@ -24,8 +24,24 @@ int main(int argc, char* argv[])
 		unitTests.test();
 	}
 	else if(test_or_game == "game" || argc == 1){
-		game();
+		// game();
+		test_parse_move();
 	}
+}
+
+void test_parse_move(){
+	/*
+		Test selection of piece in prep for moving pieces
+	*/
+	Positions startingPosition("rrrrrrrR888888pppppppp");		// Use FEN-like notation to set starting positions
+    Board board(startingPosition);  					// Pass the position obj to Board constructor to create Board with the given positions
+    board.draw();										// Draw board with updated pieces
+    board.move_by_ints(3,11); // Move piece on square 3 to square 11
+    board.draw();
+    board.move_by_ints(3,11);
+    board.draw();
+
+
 }
 
 void set_simple_pieces(){
@@ -47,7 +63,10 @@ void game(){
 	/*
 		Normal game with conventional positions
 	*/
-    Positions startingPosition("rrrRRRrrPpPpppppppp");		// Use FEN-like notation to set starting positions
+    Positions startingPosition("rrrrrrrr888888pppppppp");		// Use FEN-like notation to set starting positions
     Board board(startingPosition);  					// Pass the position obj to Board constructor to create Board with the given positions
     board.draw();										// Draw board with updated pieces
+    board.move("a1 a2");
+    /*
+    */
 }
