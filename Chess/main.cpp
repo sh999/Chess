@@ -40,7 +40,13 @@ void test_parse_move(){
     board.draw();
     board.move_by_ints(3,11);
     board.draw();
-    cout << board.movestringToNum("a1");
+    // cout << board.movestringToNum("a1");
+    int from = board.movestringToNum("a8");
+    int to = board.movestringToNum("a7");
+    cout << from << " " << to << endl;
+    board.move_by_ints(from,to);
+    // board.move_by_ints(0,8);
+    board.draw();
 
 }
 

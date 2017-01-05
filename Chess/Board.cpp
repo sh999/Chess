@@ -113,7 +113,7 @@ int Board::movestringToNum(string pos_string){
     
     // int pos = file2
 
-    return 1;
+    return numpos;
 
 /*
     int rank = 8 - int(i / 8);

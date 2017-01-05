@@ -52,3 +52,6 @@ Maybe better to put piecessetter function in either positions class or board cla
  simplify
 
 Should have a Board constructor to take in Positions obj. to do the above
+
+1/5/17
+Working on moving pieces; currently can move by providing from and to string positions.  Need to provide standard notation move string e.g. "a2 a4"
