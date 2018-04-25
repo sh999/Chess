@@ -4,12 +4,12 @@
 using namespace std;
 
 Piece::Piece():pieceColor(WHITE){   // Base constructor sets color as white by default
-    cout << "Default Piece constructor\n";
+    // cout << "Default Piece constructor\n";
 
 }
 
 Piece::Piece(string pos, COLOR c):currentPosition(pos), pieceColor(c){
-    cout << "Piece constructor with position\n";
+    // cout << "Piece constructor with position\n";
     graphic = 'x';
 }
 /*
@@ -19,7 +19,7 @@ Piece::Piece(string pos, COLOR c, int i):currentPosition(pos), pieceColor(c), pi
 }*/
 
 char Piece::getGraphic(){
-    cout << "Piece's graphic = " << graphic << endl;
+    // cout << "Piece's graphic = " << graphic << endl;
     return graphic;
 }
 

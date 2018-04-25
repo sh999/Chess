@@ -25,7 +25,7 @@ Board::Board(Positions pos){
     for(size_t i = 0; i < allPieces.size(); i++){
         update(allPieces[i]);
     }
-    cout << "POSITIONS SIZE = " << allPieces.size() << endl;
+    // cout << "POSITIONS SIZE = " << allPieces.size() << endl;
 
 }
 
@@ -36,7 +36,7 @@ void Board::draw(){
      	Each square's char data stored in squares[]
      	Values are modified by Board::update()
     */
-    cout << "Drawing board\n";
+    // cout << "Drawing board\n";
     cout <<  " _ _ _ _ _ _ _ _\n";
     for(int i = 0; i < 64; i++){
         // Draw board and create new line after 8 squares
@@ -60,7 +60,7 @@ void Board::update(Piece *p){
         Then, the piece gives its character representation, which is stored in board's squares[].
         Modifies squares[], which holds identity of what piece is on each square 
     */
-    cout << "Calling board update\n";
+    // cout << "Calling board update\n";
     sqToModify = p->posToSquare();   // Get which board square which to modify
     squares[sqToModify] = p->getGraphic();      // Currently can only draw Pawns
     //        squares[sqToModify] = 'o';      // Currently can only draw Pawns
@@ -70,23 +70,23 @@ void Board::move(string move_string){
     /*
         Play the move as specified by move_string
     */
-    cout << "Doing move " << move_string << endl;
+    // cout << "Doing move " << move_string << endl;
 }
 void Board::select_by_int(int num_pos){
     /*
         Input: numeric square position of board
         Output: Give info on what is on that square
     */
-    cout << "Selecting square " << num_pos << endl;
-    cout << "Info on square:\n";
-    cout << squares[num_pos] << endl;
+    // cout << "Selecting square " << num_pos << endl;
+    // cout << "Info on square:\n";
+    // cout << squares[num_pos] << endl;
 }
 void Board::move_by_ints(int from, int to){
     /*
         Input: Numeric positions
         Task: Move piece on position "from" to position "to"
     */
-    cout << "Moving from " << from << " to " << to << endl;
+    // cout << "Moving from " << from << " to " << to << endl;
     if(squares[from] != ' '){  // Perform move if there is piece on square
         squares[to] = squares[from];
         squares[from] = ' ';
@@ -99,17 +99,17 @@ int Board::movestringToNum(string pos_string){
         Task: Convert to numerical board position;
             opposite of squareToPos()
     */
-    cout << "Doing move " << pos_string << endl;
+    // cout << "Doing move " << pos_string << endl;
     char file = pos_string[0];
     int rank = int(pos_string[1])-48;
-    cout << "file = " << file << endl;
-    cout << "rank = " << rank << endl;
+    // cout << "file = " << file << endl;
+    // cout << "rank = " << rank << endl;
     int file2 = int(file)-97;
     int rank2 = 8-rank;
     int numpos = rank2*8+file2;
-    cout << "file2 = " << file2 << endl;
-    cout << "rank2 = " << rank2 << endl;
-    cout << "numpos = " << numpos << endl;
+    // cout << "file2 = " << file2 << endl;
+    // cout << "rank2 = " << rank2 << endl;
+    // cout << "numpos = " << numpos << endl;
     
     // int pos = file2
 

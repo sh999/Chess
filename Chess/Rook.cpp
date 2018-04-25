@@ -4,11 +4,11 @@
 using namespace std;
 
 Rook::Rook(){
-	cout << "Rook default constructor\n";
+	// cout << "Rook default constructor\n";
 }
 
 Rook::Rook(string pos, COLOR c){
-    cout << "Rook (position, color) constructor \n";
+    // cout << "Rook (position, color) constructor \n";
     currentPosition = pos;
     pieceColor = c;
     if(pieceColor == WHITE){
@@ -20,6 +20,6 @@ Rook::Rook(string pos, COLOR c){
 }
 
 char Rook::getGraphic(){
-    cout << "Rook's graphic = " << graphic << endl;
+    // cout << "Rook's graphic = " << graphic << endl;
     return graphic;
 }

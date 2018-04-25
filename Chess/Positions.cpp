@@ -14,7 +14,7 @@ Positions::Positions(string inputPositions){
     for (size_t i = 0; i < inputPositions.length(); i++) {
 //        allPieces[i]->disp();
     }
-    cout << "POSITIONS SIZE = " << allPieces.size() << endl;
+    // cout << "POSITIONS SIZE = " << allPieces.size() << endl;
 }
 
 // void Positions::sendPiecesToBoard(Board &b){

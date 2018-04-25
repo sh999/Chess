@@ -12,20 +12,22 @@ void test_parse_move();
 int main(int argc, char* argv[])
 {
 	string test_or_game;	// user cmd line argument for test or game
+	cout << "argc = " << argc << endl;
 	if(argc == 1){ 			// if run without args, run game and not testing by default
 		game();
 	}
 	else{
 		test_or_game = argv[1];
 	}
-	if(test_or_game == "test"){
+
+	if(test_or_game == "unittests"){
 		cout << "Running unit testing" << endl;
 		UnitTest unitTests;
 		unitTests.test();
 	}
-	else if(test_or_game == "game" || argc == 1){
-		// game();
-		test_parse_move();
+	else if(test_or_game == "game"){
+		game();
+		// test_parse_move();
 	}
 }
 
@@ -33,6 +35,7 @@ void test_parse_move(){
 	/*
 		Test selection of piece in prep for moving pieces
 	*/
+	cout << "test_parse_move():\n";
 	Positions startingPosition("rrrrrrrR888888pppppppp");		// Use FEN-like notation to set starting positions
     Board board(startingPosition);  					// Pass the position obj to Board constructor to create Board with the given positions
     board.draw();										// Draw board with updated pieces
@@ -69,10 +72,10 @@ void game(){
 	/*
 		Normal game with conventional positions
 	*/
+	cout << "In game()\n";
     Positions startingPosition("rrrrrrrr888888pppppppp");		// Use FEN-like notation to set starting positions
     Board board(startingPosition);  					// Pass the position obj to Board constructor to create Board with the given positions
     board.draw();										// Draw board with updated pieces
     board.move("a1 a2");
-    /*
-    */
+    board.draw();										// Draw board with updated pieces
 }
