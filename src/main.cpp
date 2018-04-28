@@ -1,7 +1,9 @@
 #include <iostream>
-
+#include "GameState.h"
 void playGame();
 void runTests();
+void playerVsComp();
+
 
 int main(){
 	int status = 0;
@@ -14,9 +16,23 @@ int main(){
 }
 
 void playGame(){
-	// Play 1 vs. computer game
+	// Play regular game; can have many modes later
+	int mode = 0;
+	if(mode == 0){
+		playerVsComp();
+	}
+	else{
+		// Other game modes can be put here, such as p vs p
+
+	}
 }
 
 void runTests(){
 	// Run unit test
+}
+
+void playerVsComp(){
+	GameState gameState = GameState();
+	gameState.update();
+	gameState.draw();
 }
