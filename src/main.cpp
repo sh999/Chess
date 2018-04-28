@@ -1,5 +1,8 @@
 #include <iostream>
 
+void playGame();
+void runTests();
+
 int main(){
 	int status = 0;
 	if(status == 0){

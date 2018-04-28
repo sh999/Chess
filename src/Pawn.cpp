@@ -7,26 +7,3 @@ Pawn::Pawn(){
 	*/
 	// cout << "Pawn default constructor\n";
 }
-Pawn::Pawn(string pos, COLOR c){
-	/*
-		Give position and color for constructor
-	*/
-    // cout << "Pawn (position, color) constructor \n";
-    currentPosition = pos;
-    pieceColor = c;
-    graphic = 'P';
-    if(pieceColor == WHITE){
-    	graphic = 'P';
-    }
-    else if(pieceColor == BLACK){
-    	graphic = 'p';
-    }
-}
-
-char Pawn::getGraphic(){
-	/*
-		A graphic is the car representation of the obj.
-	*/
-    // cout << "Pawn's graphic = " << graphic << endl;
-    return graphic;
-}

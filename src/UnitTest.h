@@ -2,8 +2,7 @@
 #define UnitTest_h
 class UnitTest{
 public:
-	UnitTest(){};
-	void test();
+	UnitTest();
 };
 
 #endif
