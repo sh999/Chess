@@ -1,5 +1,6 @@
 #include <iostream>
 #include "GameState.h"
+#include <string>
 void playGame();
 void runTests();
 void playerVsComp();
@@ -32,7 +33,7 @@ void runTests(){
 }
 
 void playerVsComp(){
-	GameState gameState = GameState();
+	GameState gameState = GameState("rrrrrrrR888888pppppppp");
 	gameState.update();
 	gameState.draw();
 }

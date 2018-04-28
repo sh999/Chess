@@ -12,9 +12,13 @@ class Board{
     accomodate piece movement algorithms
  */
 public:
+    Board(std::string fen);         		 // Base constructor
     Board();         		 // Base constructor
     void move();    // Play move
     void draw();    // Draw board
+private:
+	int NUMSQUARES;
+	char pieceChars[64];
 };
 
 #endif
