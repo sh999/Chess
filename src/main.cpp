@@ -1,81 +1,19 @@
 #include <iostream>
-#include "Piece.h"
-#include "Pawn.h"
-#include "Board.h"
-#include "Positions.h"
-#include "PieceSetter.h"
-#include "UnitTest.h"
-#include <string>
-using namespace std;
-void game();
-void test_parse_move();
-int main(int argc, char* argv[])
-{
-	string test_or_game;	// user cmd line argument for test or game
-	cout << "argc = " << argc << endl;
-	if(argc == 1){ 			// if run without args, run game and not testing by default
-		game();
-	}
-	else{
-		test_or_game = argv[1];
-	}
 
-	if(test_or_game == "unittests"){
-		cout << "Running unit testing" << endl;
-		UnitTest unitTests;
-		unitTests.test();
+int main(){
+	int status = 0;
+	if(status == 0){
+		playGame();
 	}
-	else if(test_or_game == "game"){
-		game();
-		// test_parse_move();
+	else if(status == 1){
+		runTests();
 	}
 }
 
-void test_parse_move(){
-	/*
-		Test selection of piece in prep for moving pieces
-	*/
-	cout << "test_parse_move():\n";
-	Positions startingPosition("rrrrrrrR888888pppppppp");		// Use FEN-like notation to set starting positions
-    Board board(startingPosition);  					// Pass the position obj to Board constructor to create Board with the given positions
-    board.draw();										// Draw board with updated pieces
-    board.move_by_ints(3,11); // Move piece on square 3 to square 11
-    board.draw();
-    board.move_by_ints(3,11);
-    board.draw();
-    // cout << board.movestringToNum("a1");
-    int from = board.movestringToNum("a8");
-    int to = board.movestringToNum("a7");
-    cout << from << " " << to << endl;
-    board.move_by_ints(from,to);
-    // board.move_by_ints(0,8);
-    board.draw();
-
+void playGame(){
+	// Play 1 vs. computer game
 }
 
-void set_simple_pieces(){
-	/*
-		Set board with rooks and pawns in rank 8
-		Will modify this function to be a unit test
-		Currently not called by anything; copied from game()
-	*/
-	Board board;
-    Positions startingPosition("rrrrrrrrpppppppp");		// Use FEN-like notation to set starting positions
-    // board.draw();									// Draw empty board
-//    startingPosition.sendPiecesToBoard(board);		// Puts created pieces on board
-    PieceSetter pieceSetter;					
-    pieceSetter.sendPiecesToBoard(startingPosition, board); // Given a starting position, sets the pieces to the board
-    board.draw();	
-}
-
-void game(){
-	/*
-		Normal game with conventional positions
-	*/
-	cout << "In game()\n";
-    Positions startingPosition("rrrrrrrr888888pppppppp");		// Use FEN-like notation to set starting positions
-    Board board(startingPosition);  					// Pass the position obj to Board constructor to create Board with the given positions
-    board.draw();										// Draw board with updated pieces
-    board.move("a1 a2");
-    board.draw();										// Draw board with updated pieces
+void runTests(){
+	// Run unit test
 }
