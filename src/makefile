@@ -2,7 +2,7 @@ CC = g++
 LD = g++
 MAIN = main
 CFLAGS = -std=c++11 -Wall
-OBJS = main.o UnitTest.o PieceSetter.o Board.o Pawn.o Piece.o Positions.o Rook.o 
+OBJS = main.o UnitTest.o Board.o Pawn.o Piece.o  
 
 # invoke rule all when make is run
 # ensure $(MAIN) exists (create main file because MAIN = main)
