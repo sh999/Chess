@@ -1,0 +1,13 @@
+#include "PieceSetter.h"
+
+void PieceSetter::sendPiecesToBoard(Positions p, Board &b){
+	/*
+		Update squares of board to have the pieces described in positions
+	*/
+	for(size_t i = 0; i < p.getPieces().size(); i++){
+		b.update(p.getPieces()[i]);	
+	}	
+}
+
+PieceSetter::PieceSetter(){
+}
