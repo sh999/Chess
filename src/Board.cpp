@@ -21,18 +21,14 @@ Board::Board(std::string fen){
           }
         }
     }
-    // for(int i = 0; i < this->NUMSQUARES; i++){
-    //     // Empty spots
-    //     this->pieceChars[i] = this->expandedFen[i];
-    // }
     if(this->expandedFen.length() != 64){
         std::cout << "Error: FEN does not add up to 64 pieces. Current length = " << expandedFen.length() << std::endl;
     }
 }
 
 void Board::changeSquare(int src, int dest, std::string& fen){
-    // char currentPiece = fen[src];
     fen[dest] = fen[src];
+    fen[src] = '_'; // Simulate deleting piece, which leaves blank space
 }
 
 void Board::draw(){
