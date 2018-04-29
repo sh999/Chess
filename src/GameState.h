@@ -11,8 +11,8 @@ public:
 	GameState();
 	void update();	// Update data like board position
 	void draw();	// Draw on screen
-	Board b(std::string s);
 private:
+	Board board(std::string s);
 	// Board::Board board;
 };
 #endif

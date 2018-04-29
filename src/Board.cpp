@@ -1,7 +1,8 @@
 #include "Board.h"
 Board::Board(){
-	
+
 }
+
 Board::Board(std::string fen){
     this->NUMSQUARES = 64;
     for(int i = 0; i < this->NUMSQUARES; i++){
