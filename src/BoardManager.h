@@ -17,6 +17,7 @@ public:
 private:
 	// Board board(std::string s);
 	Board board;
+	bool isLegalMove();
 	// Board::Board board;
 };
 

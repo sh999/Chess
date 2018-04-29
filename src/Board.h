@@ -15,10 +15,11 @@ public:
     void move(int pos1, int pos2);    // Play move
     void draw();    // Draw board
     void update();
-
+    std::string getExpandedFen();		// return string of fen position, with '_' as space characters
 private:
 	int NUMSQUARES;
 	char pieceChars[64];
+	std::string expandedFen; // Fen string with numbers converted to '_' as spaces
 };
 
 #endif

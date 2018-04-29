@@ -12,7 +12,8 @@ BoardManager::BoardManager(){
 
 void BoardManager::move(int pos1, int pos2){
 	std::cout << "BoardManager::move" << std::endl;
-	this->board.move(pos1, pos2);
+	std::string ef = this->board.getExpandedFen();
+	// this->board.move(pos1, pos2);
 }
 
 void BoardManager::update(){
