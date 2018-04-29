@@ -1,21 +1,19 @@
-#include "GameState.h"
+#include "BoardManager.h"
 
-GameState::GameState(std::string fen){
+BoardManager::BoardManager(std::string fen){
 	std::cout << "alternate gamestate ctor\n";
 	this->board = Board("custom");
-	// Board x = Board("huh");
 }
 
-GameState::GameState(){
+BoardManager::BoardManager(){
 	std::cout << "default gamestate ctor\n";
 	this->board = Board();
 }
 
-void GameState::update(){
+void BoardManager::update(){
 	this->board.update();
 }
 
-void GameState::draw(){
+void BoardManager::draw(){
 	this->board.draw();
-	
 }

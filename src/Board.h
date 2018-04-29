@@ -1,19 +1,17 @@
 #ifndef board_h
 #define board_h
+
 #include <string>
 #include <iostream>
 
 class Board{
-/*
- Board is a data structure to store what piece is on each square
- Currently it is a very simple implementation, with the identity
-  of each square stored in a char[].
- More complex data structure can be used to more easily
-    accomodate piece movement algorithms
- */
+// This should be a dumb data structure
+// All the move logic should be in a diff. class
+// So this just stores piece info and calls the
+// appropriate move functions on the pieces
 public:
-    Board(std::string fen);         		 // Base constructor
-    Board();         		 // Base constructor
+    Board(std::string fen);      
+    Board();         		 
     void move();    // Play move
     void draw();    // Draw board
     void update();

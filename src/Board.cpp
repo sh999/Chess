@@ -1,5 +1,6 @@
 #include "Board.h"
 #include <iostream>
+
 Board::Board(){
 	std::cout << "Board default ctor\n";
 }
@@ -24,7 +25,7 @@ void Board::draw(){
 }
 
 void Board::update(){
-	
+
 }
 
 void Board::move(){

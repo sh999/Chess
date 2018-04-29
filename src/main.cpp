@@ -1,5 +1,5 @@
 #include <iostream>
-#include "GameState.h"
+#include "BoardManager.h"
 #include <string>
 void playGame();
 void runTests();
@@ -33,8 +33,8 @@ void runTests(){
 }
 
 void playerVsComp(){
-	GameState gameState = GameState("rrrrrrrR888888pppppppp");
-	// GameState gameState = GameState();
+	BoardManager gameState = BoardManager("rrrrrrrR888888pppppppp");
+	// BoardManager gameState = BoardManager();
 	gameState.update();
 	gameState.draw();
 }

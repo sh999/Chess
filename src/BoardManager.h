@@ -5,16 +5,18 @@
 #include <iostream>
 #include "Board.h"
 
-class GameState{
+class BoardManager{
+
 public:
-	GameState(std::string fen);
-	GameState();
+	BoardManager(std::string fen);
+	BoardManager();
 	void update();	// Update data like board position
 	void draw();	// Draw on screen
+
 private:
 	// Board board(std::string s);
 	Board board;
 	// Board::Board board;
-
 };
+
 #endif
