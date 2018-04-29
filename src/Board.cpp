@@ -30,6 +30,11 @@ Board::Board(std::string fen){
     }
 }
 
+void Board::changeSquare(int src, int dest, std::string& fen){
+    // char currentPiece = fen[src];
+    fen[dest] = fen[src];
+}
+
 void Board::draw(){
 	for(int i = 0; i < this->NUMSQUARES; i++){
     	if(i % 8 == 0){
@@ -51,4 +56,5 @@ void Board::update(){
 
 void Board::move(int pos1, int pos2){
     std::cout << "In Board::move" << std::endl;
+    changeSquare(pos1, pos2, this->expandedFen);
 }

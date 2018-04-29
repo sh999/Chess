@@ -20,6 +20,7 @@ private:
 	int NUMSQUARES;
 	char pieceChars[64];
 	std::string expandedFen; // Fen string with numbers converted to '_' as spaces
+	void changeSquare(int src, int dest, std::string& fen); // put 'piece' in square; also used to 'delete' piece from square by setting it to blank
 };
 
 #endif
