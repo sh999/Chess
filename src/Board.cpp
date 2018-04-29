@@ -2,13 +2,13 @@
 #include <iostream>
 #include <vector>
 Board::Board(){
-	std::cout << "Board default ctor\n";
+	// std::cout << "Board default ctor\n";
 }
 
 Board::Board(std::string fen){
-	std::cout << "Board alternative ctor\n";
+	// std::cout << "Board alternative ctor\n";
     this->NUMSQUARES = 64;
-    // Example of expanding fen:
+        // Example of expanding fen:
     // rr3r2 -> rrxxxrxx (x is a space)
     std::string expandedFen;    // numbers in fen will be expanded as space character, here as 'x'
     for(int i = 0; i < fen.length(); i++){
@@ -46,6 +46,6 @@ void Board::update(){
 
 }
 
-void Board::move(){
-    
+void Board::move(int pos1, int pos2){
+    std::cout << "In Board::move" << std::endl;
 }

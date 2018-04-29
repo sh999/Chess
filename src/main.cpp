@@ -1,6 +1,7 @@
 #include <iostream>
 #include "BoardManager.h"
 #include <string>
+#include <tuple>
 void playGame();
 void runTests();
 void playerVsComp();
@@ -33,8 +34,10 @@ void runTests(){
 }
 
 void playerVsComp(){
-	BoardManager boardManager = BoardManager("rrrrrrrR888888pppppppp");
+	BoardManager boardManager = BoardManager("rrrrrrrr888888RRRRRRRR");
 	// BoardManager boardManager = BoardManager();
-	boardManager.update();
+	std::tuple<int,int> move = std::make_tuple(63,55);
+	// boardManager.update();
+	boardManager.move(std::get<0>(move), std::get<1>(move));	
 	boardManager.draw();
 }

@@ -12,7 +12,7 @@ class Board{
 public:
     Board(std::string fen);      
     Board();         		 
-    void move();    // Play move
+    void move(int pos1, int pos2);    // Play move
     void draw();    // Draw board
     void update();
 
