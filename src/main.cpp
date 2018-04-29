@@ -34,6 +34,7 @@ void runTests(){
 
 void playerVsComp(){
 	GameState gameState = GameState("rrrrrrrR888888pppppppp");
+	// GameState gameState = GameState();
 	gameState.update();
 	gameState.draw();
 }

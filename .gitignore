@@ -5,6 +5,7 @@ Chess/*.exe
 Chess/*.o
 src/*.o
 src/*.exe
+src/*stackdump
 Chess/main
 #!Chess/*
 #!Chess

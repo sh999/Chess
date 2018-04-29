@@ -12,7 +12,9 @@ public:
 	void update();	// Update data like board position
 	void draw();	// Draw on screen
 private:
-	Board board(std::string s);
+	// Board board(std::string s);
+	Board board;
 	// Board::Board board;
+
 };
 #endif

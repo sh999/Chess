@@ -16,6 +16,8 @@ public:
     Board();         		 // Base constructor
     void move();    // Play move
     void draw();    // Draw board
+    void update();
+
 private:
 	int NUMSQUARES;
 	char pieceChars[64];
