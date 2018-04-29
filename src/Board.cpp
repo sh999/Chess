@@ -9,14 +9,18 @@ Board::Board(std::string fen){
 	std::cout << "Board alternative ctor\n";
     this->NUMSQUARES = 64;
     for(int i = 0; i < this->NUMSQUARES; i++){
-    	this->pieceChars[3] = 'X';
+        this->pieceChars[i] = '.';
+    	// this->pieceChars[i] = fen[i];
+    }
+    for(int i = 0; i < fen.length(); i++){
+        this->pieceChars[i] = fen[i];
     }
 }
 
 void Board::draw(){
 	for(int i = 0; i < this->NUMSQUARES; i++){
     	if(i % 8 == 0){
-    		std::cout << "\n";
+            std::cout << "\n" << this->pieceChars[i] << " ";
     	}
     	else{
     		std::cout << this->pieceChars[i] << " ";

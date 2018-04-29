@@ -33,8 +33,8 @@ void runTests(){
 }
 
 void playerVsComp(){
-	BoardManager gameState = BoardManager("rrrrrrrR888888pppppppp");
-	// BoardManager gameState = BoardManager();
-	gameState.update();
-	gameState.draw();
+	BoardManager boardManager = BoardManager("rrrrrrrR888888pppppppp");
+	// BoardManager boardManager = BoardManager();
+	boardManager.update();
+	boardManager.draw();
 }

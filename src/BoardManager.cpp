@@ -2,7 +2,7 @@
 
 BoardManager::BoardManager(std::string fen){
 	std::cout << "alternate gamestate ctor\n";
-	this->board = Board("custom");
+	this->board = Board(fen);
 }
 
 BoardManager::BoardManager(){
