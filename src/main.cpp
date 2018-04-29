@@ -36,9 +36,15 @@ void runTests(){
 void playerVsComp(){
 	BoardManager boardManager = BoardManager("rrrrrrrr888888RRRRRRRR");
 	// BoardManager boardManager = BoardManager();
-	std::tuple<int,int> move = std::make_tuple(63,47);
 	// boardManager.update();
+	std::cout << "\nBegin new game" << std::endl;
 	boardManager.draw();
+	
+	std::tuple<int,int> move = std::make_tuple(63,47);
+	boardManager.move(std::get<0>(move), std::get<1>(move));	
+	boardManager.draw();
+
+	move = std::make_tuple(7,47);
 	boardManager.move(std::get<0>(move), std::get<1>(move));	
 	boardManager.draw();
 }

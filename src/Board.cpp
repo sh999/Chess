@@ -8,7 +8,7 @@ Board::Board(){
 Board::Board(std::string fen){
 	// std::cout << "Board alternative ctor\n";
     this->NUMSQUARES = 64;
-        // Example of expanding fen:
+    // Example of expanding fen:
     // rr3r2 -> rrxxxrxx (x is a space)
     for(int i = 0; i < fen.length(); i++){
         if(fen[i] - 48 > 8){
@@ -51,6 +51,6 @@ void Board::update(){
 }
 
 void Board::move(int pos1, int pos2){
-    std::cout << "In Board::move" << std::endl;
+    // std::cout << "In Board::move" << std::endl;
     changeSquare(pos1, pos2, this->expandedFen);
 }
