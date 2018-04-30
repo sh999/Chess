@@ -5,6 +5,10 @@
 #include <iostream>
 #include "Board.h"
 
+enum PieceEnum{
+	ROOK, KNIGHT, BISHOP, QUEEN, KING, PAWN
+};
+
 class BoardManager{
 
 public:

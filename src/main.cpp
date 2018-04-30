@@ -43,7 +43,11 @@ void playerVsComp(){
 	boardManager.move(std::get<0>(move), std::get<1>(move));	
 	boardManager.draw();
 
-	move = std::make_tuple(7,47);
+	move = std::make_tuple(7,39);
+	boardManager.move(std::get<0>(move), std::get<1>(move));	
+	boardManager.draw();
+
+	move = std::make_tuple(47,49);
 	boardManager.move(std::get<0>(move), std::get<1>(move));	
 	boardManager.draw();
 }
