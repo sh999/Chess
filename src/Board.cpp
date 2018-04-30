@@ -15,6 +15,7 @@ Board::Board(std::string fen){
           this->expandedFen.push_back(fen[i]);
         }
         else{
+          // Deal with number in a fen string by putting right # of spaces
           int numSpaces = fen[i] - 48;
           for(int j = 0; j< numSpaces; j++){
             this->expandedFen.push_back('_'); // space character
@@ -32,6 +33,7 @@ void Board::changeSquare(int src, int dest, std::string& fen){
 }
 
 void Board::draw(){
+    // Draw all 64 squares and do newline for every 8 spaces
 	for(int i = 0; i < this->NUMSQUARES; i++){
     	if(i % 8 == 0){
             std::cout << "\n" << this->expandedFen[i] << " ";

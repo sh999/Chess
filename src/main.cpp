@@ -25,7 +25,6 @@ void playGame(){
 	}
 	else{
 		// Other game modes can be put here, such as p vs p
-
 	}
 }
 

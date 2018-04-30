@@ -23,7 +23,6 @@ void BoardManager::move(int pos1, int pos2){
 	// std::cout << "BoardManager::move" << std::endl;
 	std::string expandedFen = this->board.getExpandedFen();
 	std::cout << "\n\nMoving from square " << pos1 << " to " << pos2 << std::endl; 
-
 	this->board.move(pos1, pos2);
 	// if(isLegalMove(expandedFen, pos1, pos2)){
 	// 	this->board.move(pos1, pos2);
