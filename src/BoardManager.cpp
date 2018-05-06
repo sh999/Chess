@@ -13,23 +13,30 @@ BoardManager::BoardManager(){
 bool BoardManager::isLegalMove(std::string expandedFen, int srcPos, int destPos){
 	char pieceChar = expandedFen[srcPos];
 	PieceEnum pieceType;
+	PieceColor pieceColor = BLACK;
 	if(pieceChar == 'r' || pieceChar == 'R'){
 		pieceType = ROOK;
+		if(pieceChar == 'R') pieceColor = WHITE;
 	}
 	else if(pieceChar == 'p' || pieceChar == 'P'){
 		pieceType = PAWN;
+		if(pieceChar == 'P') pieceColor = WHITE;
 	}
 	else if(pieceChar == 'n' || pieceChar == 'N'){
 		pieceType = KNIGHT;
+		if(pieceChar == 'N') pieceColor = WHITE;
 	}
 	else if(pieceChar == 'b' || pieceChar == 'B'){
 		pieceType = BISHOP;
+		if(pieceChar == 'B') pieceColor = WHITE;
 	}
 	else if(pieceChar == 'q' || pieceChar == 'Q'){
 		pieceType = QUEEN;
+		if(pieceChar == 'Q') pieceColor = WHITE;
 	}
 	else if(pieceChar == 'k' || pieceChar == 'K'){
 		pieceType = KING;
+		if(pieceChar == 'K') pieceColor = WHITE;
 	}
 
 	switch(pieceType){
@@ -53,6 +60,7 @@ bool BoardManager::isLegalMove(std::string expandedFen, int srcPos, int destPos)
 			// Pawn move restrictions (not considering en passant this time):
 			// Can only move one square ahead (depends on player color)
 			// Can move diagonal if capturing
+
 			break;
 	}
 

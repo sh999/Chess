@@ -9,6 +9,10 @@ enum PieceEnum{
 	ROOK, KNIGHT, BISHOP, QUEEN, KING, PAWN
 };
 
+enum PieceColor{
+	BLACK, WHITE
+};
+
 class BoardManager{
 
 public:
