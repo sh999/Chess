@@ -19,6 +19,19 @@ bool BoardManager::isLegalMove(std::string expandedFen, int srcPos, int destPos)
 	else if(pieceChar == 'p' || pieceChar == 'P'){
 		pieceType = PAWN;
 	}
+	else if(pieceChar == 'n' || pieceChar == 'N'){
+		pieceType = KNIGHT;
+	}
+	else if(pieceChar == 'b' || pieceChar == 'B'){
+		pieceType = BISHOP;
+	}
+	else if(pieceChar == 'q' || pieceChar == 'Q'){
+		pieceType = QUEEN;
+	}
+	else if(pieceChar == 'k' || pieceChar == 'K'){
+		pieceType = KING;
+	}
+
 	switch(pieceType){
 		case ROOK:
 			// Check vertical move
@@ -37,6 +50,9 @@ bool BoardManager::isLegalMove(std::string expandedFen, int srcPos, int destPos)
 				return false;
 			}
 		case PAWN:
+			// Pawn move restrictions (not considering en passant this time):
+			// Can only move one square ahead (depends on player color)
+			// Can move diagonal if capturing
 			break;
 	}
 
