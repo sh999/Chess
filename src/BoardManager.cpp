@@ -23,10 +23,13 @@ bool BoardManager::isLegalMove(std::string expandedFen, int srcPos, int destPos)
 		case ROOK:
 			// Check vertical move
 			if((srcPos  - destPos) % 8 == 0){
+				// moving vertical will make above condit true
 				return true;
 			}
 			// Check horizontal move
-			else if((srcPos - destPos) <= 7 && (destPos - srcPos) >= -7){
+			else if((srcPos - destPos) <= 7 && (destPos - srcPos) >= -7 && (srcPos / 8 ) == (destPos/ 8)){
+				// difference betw src and destpos has to be within 7, otherwise you're moving off the edge
+				// also / 8 has to be equal b/c dividing by 8 will show which rank it's in; back rank is row 0
 				return true;
 			}
 			// Failed all conditions
