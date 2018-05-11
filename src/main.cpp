@@ -5,7 +5,7 @@
 void playGame();
 void runTests();
 void playerVsComp();
-
+void testSingleMoves();
 
 int main(){
 	int status = 0;
@@ -33,6 +33,13 @@ void runTests(){
 }
 
 void playerVsComp(){
+	testSingleMoves();
+	
+}
+
+void testSingleMoves(){
+	// Test moving by calling move step by step
+	
 	BoardManager boardManager = BoardManager("rrrrrrrr888888RRRRRRRR");
 	// BoardManager boardManager = BoardManager();
 	// boardManager.update();
