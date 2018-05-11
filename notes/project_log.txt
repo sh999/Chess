@@ -1,0 +1,10 @@
+5/11/18
+Previously:
+Restarted project under restart branch. 
+Basic movechecking for rook done.
+No testing done yet.
+Movement done step by step.
+
+It would be worthwile to make a .pgn loader and load a game.
+Essentially, this would be a simple game viewer and doesn't require move legality checking.
+Is it worth doing? It would be nice to make it fully graphical. I'm currently setting up sfml.
