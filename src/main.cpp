@@ -1,11 +1,13 @@
 #include <iostream>
 #include "BoardManager.h"
+#include "PgnParser.h"
 #include <string>
 #include <tuple>
 void playGame();
 void runTests();
 void playerVsComp();
 void testSingleMoves();
+void testLoadPgn();
 
 int main(){
 	int status = 0;
@@ -40,8 +42,9 @@ void playerVsComp(){
 
 
 void testLoadPgn(){
-	std::cout << "Testing loading pgn and running moves"
-	string input = "../Chess/pgn/game1.pgn";
+	std::cout << "Testing loading pgn and running moves\n";
+	std::string input = "../pgn/game1.pgn";
+	PgnParser pgnParser = PgnParser(input);
 }
 
 void testSingleMoves(){
