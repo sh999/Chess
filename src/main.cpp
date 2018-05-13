@@ -33,13 +33,21 @@ void runTests(){
 }
 
 void playerVsComp(){
-	testSingleMoves();
+	// testSingleMoves();
+	testLoadPgn();
 	
+}
+
+
+void testLoadPgn(){
+	std::cout << "Testing loading pgn and running moves"
+	string input = "../Chess/pgn/game1.pgn";
 }
 
 void testSingleMoves(){
 	// Test moving by calling move step by step
-	
+	std::cout << "Testing single moves\n";
+
 	BoardManager boardManager = BoardManager("rrrrrrrr888888RRRRRRRR");
 	// BoardManager boardManager = BoardManager();
 	// boardManager.update();
