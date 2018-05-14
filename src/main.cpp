@@ -45,6 +45,8 @@ void testLoadPgn(){
 	std::cout << "Testing loading pgn and running moves\n";
 	std::string input = "../pgn/game1.pgn";
 	PgnParser pgnParser = PgnParser(input);
+	std::cout << "Moves = " << pgnParser.getMoves() << "\n";
+	pgnParser.printMoves();
 }
 
 void testSingleMoves(){
